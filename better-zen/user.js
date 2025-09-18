@@ -16,7 +16,7 @@ user_pref("browser.cache.disk.enable", false);
 
 /* Zen value: standard
  * Sets content blocking to strict mode - enhances privacy and security but may break some websites */
-user_pref("browser.contentblocking.category", "strict");
+user_pref("browser.contentblocking.category", "custom");
 
 /* Zen value: false
  * Downloads first go to the operating system's temp directory before final location - improves security against malicious downloads */
@@ -175,3 +175,40 @@ user_pref("signon.formlessCapture.enabled", false);
 /* Zen value: true
  * Disables capturing and offering to save passwords in private sessions - improves privacy */
 user_pref("signon.privateBrowsingCapture.enabled", false);
+
+/* https://wiki.archlinux.org/title/Firefox/Privacy */
+/* https://wiki.mozilla.org/Security/Referrer */
+
+// Platform 
+user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.7103.48 Safari/537.36");
+user_pref("general.platform.override", "Win32");
+
+// Referer Stuff
+user_pref("network.http.referer.trimmingPolicy", 2);
+user_pref("network.http.sendRefererHeader", 0);
+user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
+user_pref("network.http.referer.XOriginPolicy", 2);
+user_pref("network.http.referer.spoofSource", true);
+user_pref("network.http.referer.defaultPolicy", 0);
+user_pref("network.http.referer.defaultPolicy.pbmode", 0);
+user_pref("network.http.referer.hideOnionSource", true);
+
+// DNS Related Crap
+user_pref("network.captive-portal-service.enabled", false);
+user_pref("network.dns.echconfig.enabled", true);
+user_pref("network.dns.http3_echconfig.enabled", true);
+
+// File Scanning
+user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.safebrowsing.phishing.enabled", false);
+user_pref("browser.safebrowsing.downloads.enabled", false);
+
+// Wism Disabling
+user_pref("javascript.options.wasm", false)
+user_pref("javascript.options.wasm_baselinejit", false)
+user_pref("javascript.options.wasm_ionjit", false)
+
+// Other Telemetry
+user_pref("app.normandy.user_id", "");
+user_pref("security.sandbox.content.tempDirSuffix", "");
+user_pref("toolkit.telemetry.cachedClientID", "");
