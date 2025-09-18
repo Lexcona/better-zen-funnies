@@ -186,7 +186,7 @@ user_pref("general.platform.override", "Win32");
 // Referer Stuff
 user_pref("network.http.referer.trimmingPolicy", 2);
 user_pref("network.http.sendRefererHeader", 0);
-user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
+//user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
 user_pref("network.http.referer.XOriginPolicy", 2);
 user_pref("network.http.referer.spoofSource", true);
 user_pref("network.http.referer.defaultPolicy", 0);
@@ -194,7 +194,7 @@ user_pref("network.http.referer.defaultPolicy.pbmode", 0);
 user_pref("network.http.referer.hideOnionSource", true);
 
 // DNS Related Crap
-user_pref("network.captive-portal-service.enabled", false);
+//user_pref("network.captive-portal-service.enabled", false);
 user_pref("network.dns.echconfig.enabled", true);
 user_pref("network.dns.http3_echconfig.enabled", true);
 
@@ -212,3 +212,17 @@ user_pref("javascript.options.wasm_ionjit", false)
 user_pref("app.normandy.user_id", "");
 user_pref("security.sandbox.content.tempDirSuffix", "");
 user_pref("toolkit.telemetry.cachedClientID", "");
+user_pref("browser.search.serpEventTelemetryCategorization.enabled", false);
+user_pref("browser.search.serpEventTelemetryCategorization.regionEnabled", false)
+user_pref("identity.fxaccounts.telemetry.clientAssociationPing.enabled", false)
+user_pref("nimbus.telemetry.targetingContextEnabled", false)
+user_pref("telemetry.fog.init_on_shutdown", false)
+user_pref("toolkit.telemetry.cachedProfileGroupID", "")
+user_pref("toolkit.telemetry.dap.helper.hpke", "")
+user_pref("toolkit.telemetry.dap.helper.url", "")
+user_pref("toolkit.telemetry.dap.leader.hpke", "")
+user_pref("toolkit.telemetry.dap.leader.url", "")
+user_pref("toolkit.telemetry.server_owner", "")
+user_pref("toolkit.telemetry.user_characteristics_ping.uuid", "")
+user_pref("browser.newtabpage.activity-stream.telemetry.structuredIngestion.endpoint", "")
+user_pref("toolkit.telemetry.reportingpolicy.firstRun", false)
